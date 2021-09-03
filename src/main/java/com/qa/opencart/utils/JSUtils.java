@@ -75,12 +75,10 @@ public class JSUtils{
     }
 
     public void scrollIntoView(WebElement element) {
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     public String getBrowserInfo() {
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
         String uAgent = js.executeScript("return navigator.userAgent;").toString();
         return uAgent;
     }
